@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Kdh Portfolio</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- Third party plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .gtco-nav.scrolled {
+            background: none;
+            box-shadow: none;
+        }
+
+        .gtco-nav .container {
+            width: auto !important;
+            text-align: right;
+            padding: 0 5%;
+        }
+
+        .gtco-nav .container .row {
+            display: inline-block;
+        }
+
+        .gtco-nav .container .row .col-xs-10 {
+            width: auto !important;
+        }
+
+        .gtco-cover {
+            height: 100vh !important;
+            background-image: url(images/img_bg_4.jpg);
+        }
+
+        .gtco-cover .container {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #gtco-offcanvas {
+            padding: 69px 40px 45px 10px !important;
+            width: auto;
+        }
+
+        .display-tc span {
+            animation: blink 1s step-end infinite;
+            font-size: 4.5vw;
+            line-height: 1.5;
+            font-weight: 100;
+            margin: 0;
+            padding: 0;
+            color: white;
+            opacity: 0;
+            font-family: "Open Sans", Arial, sans-serif;
+        }
+
+        /* About_Me */
+        .gtco-about .container .row .col-md-8 p {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        /* My_Skill Section */
+        .skill {
+            width: 100% !important;
+            float: none;
+            text-align: center;
+        }
+
+        .skill_content {
+            display: inline-block !important;
+            margin: 0 15px 80px 15px;
+        }
+
+        .gtco-copy h3 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* My_Project Section */
+        .my_project {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .my_project .p_title {
+            padding: 0;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .my_project .p_title h1 {
+            margin-bottom: 15px;
+            font-size: 2em
+        }
+
+        .my_project .p_content {
+            height: 320px;
+            min-width: 70vw;
+            max-width: 80vw;
+            border-radius: 10px;
+            margin: 0 auto 30px;
+            background: #ffffff;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .2), 5px 5px 10px rgba(0, 0, 0, .2);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .my_project .p_content .p_content_image {
+            float: left;
+            width: 35%;
+            height: 330px;
+            margin-right: 2rem;
+        }
+
+        .my_project .p_content .p_content_image img {
+            width: 100%;
+            height: 330px;
+        }
+
+        .my_project .p_content .p_content_info {
+            padding: 10px 0;
+            height: 100%;
+            color: #000;
+        }
+
+        .my_project .p_content .p_content_info .p_content_title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .my_project .p_content .p_content_info .p_content_date {
+            font-size: 1em;
+            margin: 10px;
+        }
+
+        .my_project .p_content .p_content_info .p_content_content {
+            font-size: 1em;
+            margin: 0 10px;
+        }
+
+        /* 			.p_content:hover {opacity:0.6;} */
+        @media all and (max-width:576px) {
+
+            .p_content,
+            .my_project {
+                width: 100%;
+            }
+
+            .my_project .p_content {
+                margin-right: 7%;
+                margin-left: 7%;
+                max-width: 100%;
+                height: 100%;
+                overflow: auto;
+            }
+
+            .my_project .p_content .p_content_info {
+                height: 100%;
+            }
+
+            .my_project .p_content .p_content_image {
+                float: left;
+                width: 100%;
+            }
+
+            .my_project .p_content .p_content_image img {
+                width: 100%;
+            }
+
+            .my_project .p_content .p_content_info .p_content_title {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin: 10px;
+                padding-top: 330px;
+            }
+
+            .my_project .p_content .p_content_info .p_content_date {
+                font-size: 1em;
+                margin: 10px;
+            }
+
+            .my_project .p_content .p_content_info .p_content_content {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+        }
+
+        .gtco-contact h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+
+        .gtco-contact p {
+            position: relative;
+            padding-bottom: 40px;
+            font-size: 18px;
+            color: #757575;
+            font-size: 1.5em;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About me</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">My skill</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">My project</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <h3><span class="text-uppercase text-white font-weight-bold">Developer&nbsp;<p></span></h3>
+                    <h5><span class="text-uppercase text-white font-weight-bold">김대형</span>
+                        <span class="text-uppercase text-white font-weight-bold">의 포트폴리오입니다.</span>
+                        <hr class="divider my-4" />
+                    </h5>
+                </div>
+                <div class="col-lg-8 align-self-baseline" />
+            </div>
+        </div>
+    </header>
+    <!-- About-->
+    <section class="page-section bg-primary" id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-left">
+                    <h2 class="text-white mt-0 text-center">About me</h2>
+                    <hr class="text-white-50 mb-4" />
+                    <p class="text-white-50 mb-4"> 어릴때 부터 화이트해커를 동경해서 해킹툴을 파헤치며 프로그래밍 언어라는 것을 처음 접하게 되었습니다.
+                        "내가 한번 만들어볼까?" 라는 생각에서 시작된 공부가 지금의 저를 개발자로 만들어준 원동력이 되었습니다.
+                        <br>10년, 20년, 30년이 지나더라도 젊은 사람들과 견주어도 부족하지 않고 발전하는 개발자를 목표로 발전해 나가겠습니다. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skill-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <h2 class="text-center mt-0">My skill</h2>
+            <hr class="divider my-4" />
+            <div class="row">
+                <div class="col-md-6 skill">
+                    <div class="animate-box" style="margin-bottom:15px;">
+                        <div class="gtco-copy" style="display:inline-block;">
+                            <h3 style="font-size:1.5em;">- Language -</h3>
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/html5_logo.png" alt="html5_language">
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/css3_logo.png" alt="css3_language">
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/js-logoss.png" alt="js_language">
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/c_logo.png" alt="c_language">
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/c++_logo.png" alt="c++_language">
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/java_logo.png" alt="java_language">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 skill">
+                    <div class="animate-box" style="margin-bottom:15px;">
+                        <div class="gtco-copy" style="display:inline-block;">
+                            <h3 style="font-size:1.5em;">- Web skill -</h3>
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/spring_logo.png" alt="spring framework">
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/jsp_logo.png" alt="jsp">
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/jquery_logo.png" alt="jquery">
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/mybatis_logo.png" alt="mybatis">
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/maven_logo.png" alt="maven">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 skill">
+                    <div class="animate-box" style="margin-bottom:15px;">
+                        <div class="gtco-copy" style="display:inline-block;">
+                            <h3 style="font-size:1.5em;">- Database -</h3>
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/oracle_logo.png" alt="oracle">
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/postgreSQL_logo.png" alt="postgreSQL">
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/mysql_logo.png" alt="mysql">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 skill">
+                    <div class="animate-box" style="margin-bottom:15px;">
+                        <div class="gtco-copy" style="display:inline-block;">
+                            <h3 style="font-size:1.5em;">- Operating System -</h3>
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/windows_logo.png" alt="windows">
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/linux_logo.png" alt="linux">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 skill">
+                    <div class="animate-box" style="margin-bottom:15px;">
+                        <div class="gtco-copy" style="display:inline-block;">
+                            <h3 style="font-size:1.5em;">- Server -</h3>
+                        </div>
+                    </div>
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/apache_logo.png" alt="tomcat">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 skill">
+                    <div class="animate-box" style="margin-bottom:15px;">
+                        <div class="gtco-copy" style="display:inline-block;">
+                            <h3 style="font-size:1.5em;">- Other Tools -</h3>
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/github_logo.png" alt="github">
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/eclipse_logo.png" alt="eclipse">
+                        </div>
+                    </div>
+
+                    <div class="skill_content">
+                        <div class="gtco-icon">
+                            <img src="images/sqlyog_logo.png" alt="sqlyog">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio-->
+    <section id="portfolio" data-section="portfolio" style="padding:7em 0; background:rgb(240,240,238);">
+        <div class="Container">
+            <div class="my_project">
+                <div class="p_title animate-box" data-animate-effect="fadeIn">
+                    <h2 class="text-center mt-0">My skill</h2>
+                    <hr class="divider my-4" />
+                </div>
+                <div class="p_content" onclick="fn_go('1');">
+                    <div class="p_content_image">
+                        <img src="images/jangbogo.png">
+                    </div>
+                    <div class="p_content_info">
+                        <p class="p_content_title">JANGBOGO!</h1>
+                            <p class="p_content_date">개발기간 :2018.12 ~ 2019.04</h2>
+                                <p class="p_content_content">MVC2를 기반으로 JSP&Servlet을 이용한 심부름 중개 사이트</p>
+                                <p class="p_content_content">&nbsp;- 회원가입 및 로그인 관련</p>
+                                <p class="p_content_content">&nbsp;- 고객과 기사간의 1:1 매칭 서비스 제공</p>
+                                <p class="p_content_content">&nbsp;- 심부름 의뢰 및 수주</p>
+                                <p class="p_content_content">&nbsp;- Q&A를 통한 사이트 관리</p>
+                                <p class="p_content_content">&nbsp;- REST-Ful API(Google Map, KaKaoPay, Google Login 등)사용</p>
+                                <p class="p_content_content">&nbsp;- 깃허브 : https://github.com/Daehyung-Dim/Jangbogo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function fn_go(gbn) {
+            if (gbn == "1") {
+                location.href = "https://github.com/Daehyung-Dim/Jangbogo";
+            }
+        }
+    </script>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">contact me</h2>
+                    <hr class="divider my-6" />
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center" style="padding: 10px">
+                    <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                    <div>010 - 9270 - 6077</div>
+                </div>
+                <div class="col-lg-4 mr-auto text-center" style="padding: 10px">
+                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                    <a class="d-block" href="mailto:kdh940701@gmail.com">kdh940701@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
